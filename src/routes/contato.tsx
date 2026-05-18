@@ -8,7 +8,10 @@ export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
       { title: "Contato — Zero82 Produções" },
-      { name: "description", content: "Solicite um orçamento personalizado para seu evento. Resposta em até 24h." },
+      {
+        name: "description",
+        content: "Solicite um orçamento personalizado para seu evento. Resposta em até 24h.",
+      },
       { property: "og:title", content: "Contato — Zero82 Produções" },
       { property: "og:description", content: "Vamos conversar sobre seu próximo evento." },
     ],
@@ -32,7 +35,8 @@ function Contato() {
                 Vamos criar algo <span className="text-gradient-gold">memorável</span>
               </h1>
               <p className="mt-6 text-muted-foreground">
-                Conte-nos sobre seu evento. Nossa equipe responde em até 24 horas com uma proposta personalizada.
+                Conte-nos sobre seu evento. Nossa equipe responde em até 24 horas com uma proposta
+                personalizada.
               </p>
 
               <div className="mt-10 space-y-5">
@@ -52,7 +56,10 @@ function Contato() {
             </div>
 
             <form
-              onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+              onSubmit={(e) => {
+                e.preventDefault();
+                setSent(true);
+              }}
               className="bg-card border border-border rounded-2xl p-8 space-y-4 shadow-[var(--shadow-elegant)]"
             >
               {sent ? (
@@ -67,12 +74,19 @@ function Contato() {
                 <>
                   <div>
                     <label className="text-sm font-medium block mb-1.5">Nome</label>
-                    <input required className="w-full rounded-lg bg-background border border-input px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary" />
+                    <input
+                      required
+                      className="w-full rounded-lg bg-background border border-input px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                    />
                   </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="text-sm font-medium block mb-1.5">E-mail</label>
-                      <input type="email" required className="w-full rounded-lg bg-background border border-input px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary" />
+                      <input
+                        type="email"
+                        required
+                        className="w-full rounded-lg bg-background border border-input px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
+                      />
                     </div>
                     <div>
                       <label className="text-sm font-medium block mb-1.5">Telefone</label>
@@ -89,10 +103,18 @@ function Contato() {
                     </select>
                   </div>
                   <div>
-                    <label className="text-sm font-medium block mb-1.5">Conte sobre seu evento</label>
-                    <textarea rows={4} className="w-full rounded-lg bg-background border border-input px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary resize-none" />
+                    <label className="text-sm font-medium block mb-1.5">
+                      Conte sobre seu evento
+                    </label>
+                    <textarea
+                      rows={4}
+                      className="w-full rounded-lg bg-background border border-input px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+                    />
                   </div>
-                  <button type="submit" className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gradient-gold px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:scale-[1.02] transition-transform">
+                  <button
+                    type="submit"
+                    className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gradient-gold px-6 py-3 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:scale-[1.02] transition-transform"
+                  >
                     Enviar mensagem <Send className="h-4 w-4" />
                   </button>
                 </>
