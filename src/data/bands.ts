@@ -16,9 +16,10 @@ export type Band = {
 export const bands: Band[] = [
   {
     slug: "the-velvet-strings",
-    name: "MINHA BANDAn",
+    name: "Zero82 Pop Rock",
     genre: "Rock & Pop",
-    description: "Quarteto de alta energia com setlist de clássicos do rock e hits pop atuais. Ideal para festas, formaturas e grandes eventos corporativos.",
+    description:
+      "Quarteto de alta energia com setlist de clássicos do rock e hits pop atuais. Ideal para festas, formaturas e grandes eventos corporativos.",
     members: 4,
     repertoire: ["Queen", "Foo Fighters", "Coldplay", "Maroon 5", "Legião Urbana"],
     image: rockImg,
@@ -27,7 +28,8 @@ export const bands: Band[] = [
     slug: "midnight-quartet",
     name: "Midnight Quartet",
     genre: "Jazz & Bossa",
-    description: "Sofisticação em forma de música. Quarteto de jazz com saxofone, piano, contrabaixo acústico e bateria — a trilha sonora perfeita para coquetéis e jantares.",
+    description:
+      "Sofisticação em forma de música. Quarteto de jazz com saxofone, piano, contrabaixo acústico e bateria — a trilha sonora perfeita para coquetéis e jantares.",
     members: 4,
     repertoire: ["Frank Sinatra", "Tom Jobim", "Ella Fitzgerald", "Chet Baker"],
     image: jazzImg,
@@ -36,7 +38,8 @@ export const bands: Band[] = [
     slug: "duo-aurora",
     name: "Duo Aurora",
     genre: "Acústico & Romântico",
-    description: "Voz e violão em harmonia perfeita. O duo ideal para cerimônias de casamento, bodas e celebrações íntimas ao ar livre.",
+    description:
+      "Voz e violão em harmonia perfeita. O duo ideal para cerimônias de casamento, bodas e celebrações íntimas ao ar livre.",
     members: 2,
     repertoire: ["Ed Sheeran", "Jack Johnson", "Marisa Monte", "John Mayer"],
     image: acousticImg,
@@ -45,7 +48,8 @@ export const bands: Band[] = [
     slug: "dj-noctus",
     name: "DJ Noctus",
     genre: "Eletrônica & House",
-    description: "Sets imersivos com produção visual completa. Do open bar ao after, mantém a pista cheia até o último minuto da festa.",
+    description:
+      "Sets imersivos com produção visual completa. Do open bar ao after, mantém a pista cheia até o último minuto da festa.",
     members: 1,
     repertoire: ["House", "Tech House", "Pop Remixes", "Brazilian Bass"],
     image: djImg,

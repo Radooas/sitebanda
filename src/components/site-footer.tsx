@@ -7,8 +7,16 @@ export function SiteFooter() {
       <div className="container mx-auto px-6 py-12 grid gap-8 md:grid-cols-3">
         <div>
           <div className="flex items-center gap-3 mb-3">
-            <img src={logo} alt="Zero82 Produções" width={40} height={40} className="h-10 w-10 object-contain rounded" />
-            <span className="font-display text-lg font-bold">Zero<span className="text-gradient-gold">82</span> Produções</span>
+            <img
+              src={logo}
+              alt="Zero82 Produções"
+              width={40}
+              height={40}
+              className="h-10 w-10 object-contain rounded"
+            />
+            <span className="font-display text-lg font-bold">
+              Zero<span className="text-gradient-gold">82</span> Produções
+            </span>
           </div>
           <p className="text-sm text-muted-foreground max-w-xs">
             Música ao vivo de excelência para os momentos mais importantes da sua vida.
@@ -23,9 +31,27 @@ export function SiteFooter() {
         <div>
           <h4 className="text-sm font-semibold mb-3 text-foreground">Siga-nos</h4>
           <div className="flex gap-3">
-            <a href="#" aria-label="Instagram" className="h-10 w-10 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"><Instagram className="h-4 w-4" /></a>
-            <a href="#" aria-label="Facebook" className="h-10 w-10 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"><Facebook className="h-4 w-4" /></a>
-            <a href="#" aria-label="Youtube" className="h-10 w-10 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"><Youtube className="h-4 w-4" /></a>
+            <a
+              href="#"
+              aria-label="Instagram"
+              className="h-10 w-10 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+            >
+              <Instagram className="h-4 w-4" />
+            </a>
+            <a
+              href="#"
+              aria-label="Facebook"
+              className="h-10 w-10 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+            >
+              <Facebook className="h-4 w-4" />
+            </a>
+            <a
+              href="#"
+              aria-label="Youtube"
+              className="h-10 w-10 rounded-full border border-border flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
+            >
+              <Youtube className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </div>

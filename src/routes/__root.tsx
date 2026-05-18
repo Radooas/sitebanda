@@ -1,22 +1,20 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-
-import appCss from "../styles.css?url";
+import { Outlet, Link, createRootRoute, HeadContent } from "@tanstack/react-router";
 
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
+        <h2 className="mt-4 text-xl font-semibold text-foreground">Página não encontrada</h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+          A página que você está procurando não existe ou foi movida.
         </p>
         <div className="mt-6">
           <Link
             to="/"
             className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Go home
+            Voltar para o início
           </Link>
         </div>
       </div>
@@ -29,44 +27,38 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SonoraLive — Música ao vivo para seu evento" },
-      { name: "description", content: "Bandas, DJs e produção musical sob medida para casamentos, eventos corporativos e festas exclusivas." },
-      { name: "author", content: "SonoraLive" },
-      { property: "og:title", content: "SonoraLive — Música ao vivo para seu evento" },
-      { property: "og:description", content: "Bandas, DJs e produção musical sob medida para casamentos, eventos corporativos e festas exclusivas." },
+      { title: "Zero82 Produções — Música ao vivo para seu evento" },
+      {
+        name: "description",
+        content:
+          "Bandas, DJs e produção musical sob medida para casamentos, eventos corporativos e festas exclusivas.",
+      },
+      { name: "author", content: "Zero82 Produções" },
+      { property: "og:title", content: "Zero82 Produções — Música ao vivo para seu evento" },
+      {
+        property: "og:description",
+        content:
+          "Bandas, DJs e produção musical sob medida para casamentos, eventos corporativos e festas exclusivas.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "SonoraLive — Música ao vivo para seu evento" },
-      { name: "twitter:description", content: "Bandas, DJs e produção musical sob medida para casamentos, eventos corporativos e festas exclusivas." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/988441da-ddf9-48f6-a8bb-479efb293153/id-preview-3bd6703b--d5e16f92-bdba-479c-90b3-c2968c205dc4.lovable.app-1778078896745.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/988441da-ddf9-48f6-a8bb-479efb293153/id-preview-3bd6703b--d5e16f92-bdba-479c-90b3-c2968c205dc4.lovable.app-1778078896745.png" },
-    ],
-    links: [
+      { name: "twitter:title", content: "Zero82 Produções — Música ao vivo para seu evento" },
       {
-        rel: "stylesheet",
-        href: appCss,
+        name: "twitter:description",
+        content:
+          "Bandas, DJs e produção musical sob medida para casamentos, eventos corporativos e festas exclusivas.",
       },
     ],
   }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
 });
 
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
-
 function RootComponent() {
-  return <Outlet />;
+  return (
+    <>
+      <HeadContent />
+      <Outlet />
+    </>
+  );
 }
